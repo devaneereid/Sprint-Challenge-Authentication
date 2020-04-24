@@ -12,7 +12,7 @@ describe('server', () => {
             return request(server) 
                 .post('/api/auth/register')
                 .send({
-                    username: 'Dan',
+                    username: 'Sammy',
                     password: 'password'
                 })
                 .then(res => {

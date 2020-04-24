@@ -2,6 +2,12 @@ const request = require('supertest');
 const server = require('../api/server.js');
 
 describe('server', () => {
+    describe('test environment', () => {
+        it('should use test environment', () => {
+            expect(process.env.DB_ENV).toBe('testing')
+        });
+    });
+
     describe('/api/jokes', () => {
         it('should return all jokes', () => {
             return request(server)
